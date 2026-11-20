@@ -1,0 +1,54 @@
+[
+  {
+    "kind": "TIMING_NEXT_PERIOD",
+    "ids": [
+      "BATCH-20261031-INR",
+      "BNK-0030"
+    ],
+    "amount_minor": "4336500",
+    "explanation": "October 31 captures paid on 2026-11-02, after the October cutoff."
+  },
+  {
+    "kind": "ROUNDING_ACCUMULATION",
+    "ids": [
+      "BATCH-20261014-INR",
+      "BNK-0014"
+    ],
+    "amount_minor": "-260",
+    "explanation": "520 fees round up by half a paise per capture. The bank rounds the batch fee once."
+  },
+  {
+    "kind": "DUPLICATE_PLATFORM",
+    "ids": [
+      "TXN-000221"
+    ],
+    "amount_minor": "130046",
+    "explanation": "One capture occurs twice in the export; its bank batch contains one copy."
+  },
+  {
+    "kind": "ORPHAN_REFUND",
+    "ids": [
+      "TXN-001999",
+      "TXN-900000"
+    ],
+    "amount_minor": "-122500",
+    "explanation": "The refund has no original capture in the export and was excluded from bank settlement."
+  },
+  {
+    "kind": "BANK_ONLY_CREDIT",
+    "ids": [
+      "BNK-0036"
+    ],
+    "amount_minor": "-41507",
+    "explanation": "Bank credit has no platform activity or settlement batch behind it."
+  },
+  {
+    "kind": "FEE_DRIFT",
+    "ids": [
+      "BATCH-20261019-INR",
+      "BNK-0019"
+    ],
+    "amount_minor": "25000",
+    "explanation": "The bank deducted 25000 paise more than the modeled batch fee."
+  }
+]
